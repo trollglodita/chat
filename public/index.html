@@ -10,6 +10,7 @@
 	<p>Check in Network Chrome pannel for if the Socket modules was loaded</p><br/>
 	<p>socket = io.connect('http://localhost:3000')</p>
 	<p>Check the Headers; 1st the connection and then the Socket itself</p>
+	<p>socket.emit('chat', { message: 'hi'});</p>
 
 <script type="text/javascript" charset="utf-8">
 var socket = io.connect('http://localhost:3000');
@@ -19,6 +20,10 @@ socket.on('entrance', function  (data) {
 });
 
 socket.on('exit', function  (data) {
+	document.write('<p>' + data.message + '</p>');
+});
+
+socket.on('chat', function  (data) {
 	document.write('<p>' + data.message + '</p>');
 });
 </script>
