@@ -3,8 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Socket Test</title>
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
 </head>
 <body>
-	<h1>Hola mundo</h1>
+	<h1>Hola mundo con Socket.io</h1><br/>
+	<p>Check in Network Chrome pannel for if the Socket modules was loaded</p><br/>
+	<p>socket = io.connect('http://localhost:3000')</p>
+	<p>Check the Headers; 1st the connection and then the Socket itself</p>
 </body>
 </html>
