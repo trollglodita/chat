@@ -17,6 +17,10 @@ var socket = io.connect('http://localhost:3000');
 socket.on('entrance', function  (data) {
 	document.write('<p>' + data.message + '</p>');
 });
+
+socket.on('exit', function  (data) {
+	document.write('<p>' + data.message + '</p>');
+});
 </script>
 </body>
 </html>
