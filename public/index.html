@@ -10,5 +10,13 @@
 	<p>Check in Network Chrome pannel for if the Socket modules was loaded</p><br/>
 	<p>socket = io.connect('http://localhost:3000')</p>
 	<p>Check the Headers; 1st the connection and then the Socket itself</p>
+
+<script type="text/javascript" charset="utf-8">
+var socket = io.connect('http://localhost:3000');
+
+socket.on('entrance', function  (data) {
+	document.write('<p>' + data.message + '</p>');
+});
+</script>
 </body>
 </html>
